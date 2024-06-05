@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cd3c8315.css",
+    "main.js": "/static/js/main.5787ab0f.js",
+    "static/js/453.dbf145c9.chunk.js": "/static/js/453.dbf145c9.chunk.js",
+    "static/media/Group 626340.png": "/static/media/Group 626340.22f49c7e8195ca0ae0e8.png",
+    "static/media/Group 626358.png": "/static/media/Group 626358.0859bfb2a961f98aaa43.png",
+    "static/media/Group 1094.png": "/static/media/Group 1094.e788b8ba2a26c163a614.png",
+    "static/media/Union (4).png": "/static/media/Union (4).f125bd720c2741ce5b3c.png",
+    "static/media/Group 626351.png": "/static/media/Group 626351.14091f5e1d77554ea4be.png",
+    "static/media/Switzer-Semibold.otf": "/static/media/Switzer-Semibold.cc12cb721b7b0bcca885.otf",
+    "static/media/Switzer-Extrabold.otf": "/static/media/Switzer-Extrabold.933fe17789c8bd029011.otf",
+    "static/media/Switzer-Medium.otf": "/static/media/Switzer-Medium.504cde750d9852ebfbd1.otf",
+    "static/media/Switzer-Bold.otf": "/static/media/Switzer-Bold.d88109be7ac2f1cc191e.otf",
+    "static/media/comma.png": "/static/media/comma.06067559c815d7104be0.png",
+    "static/media/Switzer-Extralight.otf": "/static/media/Switzer-Extralight.59d7faea8546941aa345.otf",
+    "static/media/Switzer-Light.otf": "/static/media/Switzer-Light.322c0db23e9b415e4bd4.otf",
+    "static/media/Switzer-Thin.otf": "/static/media/Switzer-Thin.2bd03fea10497d459795.otf",
+    "static/media/Switzer-Regular.otf": "/static/media/Switzer-Regular.86be075336fbb2576aaa.otf",
+    "static/media/Switzer-Black.otf": "/static/media/Switzer-Black.e837ea8cd871958148e6.otf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.cd3c8315.css.map": "/static/css/main.cd3c8315.css.map",
+    "main.5787ab0f.js.map": "/static/js/main.5787ab0f.js.map",
+    "453.dbf145c9.chunk.js.map": "/static/js/453.dbf145c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd3c8315.css",
+    "static/js/main.5787ab0f.js"
+  ]
+}
