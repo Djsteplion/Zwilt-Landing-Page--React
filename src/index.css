@@ -1,0 +1,1027 @@
+
+
+@font-face {
+  font-family: 'Switzer';
+  src:
+       url('./fonts/Switzer-Black.otf'),
+       url('./fonts/Switzer-Bold.otf'),
+       url('./fonts/Switzer-Extrabold.otf'),
+       url('./fonts/Switzer-Extralight.otf'),
+       url('./fonts/Switzer-Light.otf'),
+       url('./fonts/Switzer-Medium.otf'),
+       url('./fonts/Switzer-Regular.otf'),
+       url('./fonts/Switzer-Semibold.otf'),
+       url('./fonts/Switzer-Thin.otf');
+
+  font-style: normal;
+}
+
+
+
+body{
+  font-family:'Switzer', sans-serif;
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  margin-bottom: -500px;
+}
+
+
+/*** Header Component ********************************************************************/
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 36px 70px;
+  background-color: #525AA0;
+  height: 60px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.header:hover{
+  cursor: pointer;
+}
+
+.Hbtn{
+  color: #ffffff;
+  padding-right: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Hbtn:hover{
+  color: #959595;
+  transition: 400ms;
+}
+
+.login{
+  padding-right: 10px;
+  line-height: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff; 
+}
+
+.login:hover{
+  color: black;
+  transition: 400ms;
+}
+
+
+.joinNow{
+  padding: 15px 20px;
+  height: 43px;
+  border-radius: 16px;
+  background-color: #ffffff;
+}
+
+.joinNow:hover{
+  background-color: black;
+  color: white;
+  transition: 400ms;
+}
+
+
+/*** Hero Component *************************************************************************/
+
+.hero{
+  text-align: center;
+  margin-top: 240px;
+}
+
+.hero h1{
+  color: #202220;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.avatar1{
+  margin-bottom: -5px;
+}
+
+.heroText{
+  color: black;
+  opacity: 80%;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+
+/*** Search Box Component *********************************************************************/
+.searchComponent{
+ display: flex;
+ justify-content: center;
+ align-items:center ;
+}
+
+.searchBox{
+  display: flex;
+  margin-top: 30px;
+  height: 74px;
+  width: 570px;
+  border: 1px solid #f0f0f0;
+  border-radius:16px;
+}
+
+.searchBx{
+ width: inherit;
+ border: none;
+ outline: none;
+ border-radius:17px;
+ padding: 29px 27px;
+ font-size: 16px;
+ line-height: 16px;
+ color: #959595;
+}
+
+.searchBx::placeholder{
+  color: #202220;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.searchArrow:hover{
+  cursor: pointer;
+}
+
+
+/*** IT DEVELOPMENT Component *********************************************************************/
+
+.ItAndDesign{ 
+  margin: 80px 140px;
+  text-align: center;
+}
+
+.ItAnDesign{
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  padding-top: 15px;
+}
+
+
+.ItAnDesHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  height: 44px;
+}
+
+.ItAnDesHeader:hover{
+  cursor: pointer;
+}
+
+.ItAndDev{
+  height:24px;
+  color: #202229;
+  line-height: 23.78px;
+  font-weight: 600;
+  border-radius: 15px;
+  background-color: lightgreen;
+  padding: 10px 40px;
+}
+
+.designAndCreative{
+  color: #202229;
+  line-height: 23.78px;
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 80%;
+  padding-left: 16px;
+}
+
+.ItRoles{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.roleRow1,.roleRow2,.roleRow3{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.role{
+  padding-bottom: 15px;
+  color: #959595;
+  font-size: 16px;
+}
+
+.srole{
+  padding-bottom: 15px;
+  color:#202220; 
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 16px;
+}
+
+.role:hover, .srole:hover{
+  color: #202229;
+  transition: 400ms;
+  cursor: pointer;
+}
+
+
+/*** Interlude Component *********************************************************************/
+.interlude1{
+  margin-top: 30px;
+  width: 100%;
+}
+
+/*** MarketPlace Component *********************************************************************/
+
+.slant1{
+  background-color: #EDEFFF;
+  padding: 40px 0px 1200px 100px;
+  rotate: -2deg;
+  width:inherit;
+  overflow: hidden;
+  margin-left: -25px;
+  margin-right: -15px;
+}
+
+.markePlace{
+  position: absolute;
+  rotate: 2deg;
+}
+
+.marketPlaceHeading{
+  text-align: center;
+  padding-top: 100px;
+}
+
+.mph{
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+/*** MarketPlace inner Component after header**************************/
+
+.marketPlaceOffersAndImages{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 80px;
+}
+
+.offer1{
+  margin-bottom: 140px;
+}
+
+.offer2{
+  margin-bottom: 100px;
+}
+
+.metrics{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.metric1, .metric2, .metric3{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.metricText{
+  padding-left: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.nextOffers{
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.nextOffers:hover{
+  cursor: pointer;
+}
+
+.exploreMore{
+  padding-left: 10px;
+  color: #202220;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 18px;
+}
+
+.marketOfferImages{
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.itAnDevHeader{
+  margin-bottom: 20px;
+}
+
+.itandDev{
+  background-color: #ffffff;
+  padding: 40px 25px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+}
+
+.ItAndDevContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.designAndCreativeHeader{
+  margin-bottom: 20px;
+}
+
+.desAndCreative{
+  background-color: #ffffff;
+  padding: 40px 25px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+}
+
+.designAndCreativeContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.iconText{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.icon1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 11px;
+}
+
+.icon1:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 600ms;
+}
+
+.iconText{
+  text-align: center;
+}
+
+.moreToExplore{
+  margin-top: 17px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #202229;
+}
+
+.moreToExplore:hover{
+  cursor: pointer;
+}
+
+.thirty{
+  font-weight: 700;
+}
+
+
+/*** How It Worked Component*******************************************************/
+
+.slant2{
+  background-color: #202229;
+  padding: 40px 40px 600px 100px;
+  rotate: -2deg;
+  margin-left: -25px;
+  margin-right: -15px;
+}
+
+.quoteDiv{
+  text-align: right;
+  rotate: 2deg;
+  margin-top: -50px;
+}
+
+.howItWorked{
+  position: absolute;
+  rotate: 2deg;
+  display: flex;
+  justify-content: space-between;
+}
+
+.howIt2{
+  margin-left: 200px;
+}
+
+.howIt1Header h1{
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.avatar2{
+ padding-top: 12px; 
+}
+
+.howIt1Text{
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  opacity: 80%;
+}
+
+.howIt1Arrow{
+  margin-top: 20px;
+}
+
+.howIt1Arrow:hover{
+  cursor: pointer;
+}
+
+.JasonMakiProfile{
+  display: flex;
+  align-items: center;
+}
+
+.jasonMakiName{
+  margin-left: 10px;
+}
+
+.jason{
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 600; 
+}
+
+.JasonJob{
+  margin-top: -30px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500; 
+  color: #ffffff;
+  opacity: 40%;
+}
+
+.JasonMakkiTestimony{
+  margin-top: 20px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400; 
+  color: #ffffff;
+  opacity: 80%;
+}
+
+.howIt2{
+  margin-top: 102px;
+}
+
+
+/*** How We Ensure Component*******************************************************/
+
+.howWeEnsure{
+  background-color: rgba(255,255,255,1);
+  padding-left: 50px;
+  padding-top: 60px;
+}
+
+.howWeEnsureHeader h1{
+  line-height: 64px;
+  font-size: 54px;
+  font-weight: 700;
+  color: #202229;
+}
+
+.howWeEnsureHeader p{
+  line-height: 32px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #1E1515;
+  opacity: 80%;
+}
+
+.howWeEnsureContent{
+  width: max-content;
+}
+
+.howWeEnsureContent:hover{
+  cursor: pointer;
+}
+
+.step1, .step3, .step4, .step5{
+  display: flex;
+  align-items: center;
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  color: #202229;
+}
+
+.step3, .step4, .step5{
+  background-color: #f0f0f0;
+  margin-bottom: 3px;
+}
+
+.step2{
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+.step2::after{
+  rotate: -2deg;
+}
+
+.step2content{
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #202229;
+  opacity: 80%;
+  padding-top: 12px;
+}
+
+.step2Header{
+  display: flex;
+  align-items: center;
+}
+
+.step1 p, .step2Header p, .step3 p, .step4 p, .step5 p{
+  padding-left: 10px;
+  line-height: 17.83px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hlight{
+  font-weight: 600;
+}
+
+
+/* Start Your Journey Today Header  ****************************************************************/
+
+.startJ{
+  text-align: center;
+  margin-top: 140px;
+}
+
+.startJ h1{
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  color: rgba(32, 34, 41, 1);
+}
+
+/* Start Your Journey Today content  ****************************************************************/
+
+.slant3{
+  background-color: #EDEFFF;
+  margin: 50px 70px 50px 40px;
+  border-radius: 10px;
+  margin-top: 40px;
+  rotate: -2deg;
+  padding: 0px 30px 391px 30px;
+}
+
+.nextStarPerformer{
+  position: absolute;
+  rotate: 2deg;
+}
+
+.nextStarText{
+  display: flex;
+  margin-top: 30px;
+}
+
+.numberImage{
+  margin-top: 20px;
+}
+
+.TextContent1{
+  margin-left: 30px;
+}
+
+.TextContent2{
+  margin-left: 20px;
+}
+
+.TextContent3{
+  margin-left: 12px;
+}
+
+.TextContent1 h1, .TextContent2 h1, .TextContent3 h1{
+  margin-top: 15px;
+  line-height: 44px;
+  font-size: 34px;
+  font-weight: 600;
+  color: #202229;
+}
+
+.TextContent1 p, .TextContent2 p, .TextContent3 p{
+  margin-top: 15px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #202229;
+  opacity: 80%;
+}
+
+.jN{
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.jN:hover{
+  cursor: pointer;
+}
+
+.joinNowText{
+  margin-left: 7px;
+  line-height: 12.11px;
+  font-size: 14.8px;
+  font-weight: 500;
+  color: #202229;
+}
+
+
+.nextStarPerformer{
+  display: flex;
+
+}
+
+.nextStarImagesDiv{
+  display: flex;
+  margin-top: -10px;
+  rotate: -2deg;
+  margin-left: 190px;
+}
+
+/* evaluate to your heart component ***************************************************************/
+
+.slant4{
+  background-color: rgb(246, 212, 138);
+  margin: 50px 70px 50px 50px;
+  border-radius: 10px;
+  margin-top: 40px;
+  rotate: -2deg;
+  padding: 0px 30px 0px 30px;
+}
+
+.evaluateToHeart{
+  display: flex;
+  rotate: 2deg;
+}
+
+.evaluateImagesDiv{
+  margin-left: 210px;
+  margin-top: -13px;
+  rotate: -2deg;
+}
+
+/* start building ur team component ***************************************************************/
+.slant5{
+  background-color: #959595;
+  margin: 50px 50px 50px 60px;
+  border-radius: 10px;
+  margin-top: 40px;
+  rotate: -2deg;
+  padding: 0px 22px 6px 30px;
+}
+
+.startBuilding{
+  display: flex;
+  rotate: 2deg;
+}
+
+.startBuildingImagesDiv{
+  margin-left: 240px;
+  margin-top: -16px;
+  rotate: -2deg;
+}
+
+/* why choose zwilt component ***************************************************************/
+
+.whyChooseZwilt{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px 50px 60px;
+  background-color: #EDEFFF;
+  margin-top: 70px;
+}
+
+.whyChooseQuestion{
+  width: 100%;
+}
+
+.whyChooseQuestion h1{
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #202229;
+}
+
+.whyChooseQuestion p{
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #202229;
+  opacity: 80%;
+}
+
+.onboardWtoutRiskContainer{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 90px;
+  background-color: #ffffff;
+  box-shadow: 0px 15px 30px 0px rgba(191,181,255,0.15);
+  border-radius: 20px;
+  padding: 30px 0px 30px 50px;
+}
+
+.onboardWtoutRisk{
+  width: 100%;
+}
+
+.onboardWtoutRisk h1{
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 64px;
+  font-weight: 700;
+  color: #202229;
+}
+
+.pointsDiv{
+  margin-top: 30px;
+}
+
+.point{
+  display: flex;
+  margin-top: -10px;
+  align-items: center;
+}
+
+.point p{
+  margin-left: 6px;
+}
+
+.lN{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.lN:hover{
+  cursor: pointer;
+}
+
+.learnMoreText{
+  margin-left: 10px;
+}
+
+
+
+/* FAQ component *********************************************************************************************/
+
+.faq{
+  padding-top: 100px;
+  background-color: #f3f3f3;
+  padding-bottom: 120px;
+}
+
+.faqHeader{
+  text-align: center;
+}
+
+.faqHeader h1{
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #202229; 
+}
+
+.question1{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+}
+
+.general1{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.general1 p{
+  font-weight: 700;
+}
+
+.question{
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 400px;
+}
+
+.otherQuestion{
+  text-align: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom:1px solid #d6d6d6 ;
+}
+
+.questionsB{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+}
+
+.questionsC{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+
+.general2{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 60px;
+  padding-right: 65px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  visibility: hidden;
+}
+
+.question2{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;  
+}
+
+.questionII{
+  padding-left: 160px;
+}
+
+.question2 .general1{
+  background-color: #e8e8e8;
+}
+
+.general3{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.questions:hover{
+  cursor: pointer;
+}
+
+
+/* Need a job done component ****/
+
+.slant6{
+  background-image: linear-gradient(to bottom, #0C0C0C,#202229 100%);
+  padding: 40px 20px 1000px 70px;
+  rotate: -2deg;
+  margin-left: -25px;
+  margin-right: -15px;
+  margin-bottom: -500px;
+  overflow-y: hidden;
+}
+
+.needajobdone{
+  position: absolute;
+  width: 100%;
+}
+
+.needAjobDoneHeader{
+  position: absolute;
+  width:83.5%;
+  background-color: #525AA0;
+  padding: 100px  70px;
+  margin-right: 0px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+.footer{
+ rotate: 2deg;
+  margin-top: 410px;
+  width: 89%;
+  margin-left: -17px;
+  display: flex; 
+  justify-content: space-between; 
+  padding: 70px 15px;  
+}
+
+.footer2{
+  margin-top: -70px;
+}
+
+.link3 p, .link4 p, .link5 p, .link6 p{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px; 
+  color: #ffffff;
+}
+
+.link3:hover, .link4:hover, .link5:hover, .link6:hover{
+  cursor:pointer;
+}
+
+.f1text{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  opacity: 80%;
+  margin-top: 25px;
+}
+
+.landr{
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+} 
+
+.link1, .link2{
+  background-color: #292834;
+  color: #EDEFFF;
+  font-weight: 500;
+  font-size: 14.56px;
+  line-height: 12.16px;
+  padding: 15px 40px;
+  border-radius: 13px;
+}
+
+.link1:hover, .link2:hover{
+  cursor: pointer;
+  background-color: black;
+  transition: 400ms;
+}
+
+.otherlinkheader{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+}
+
+.footer2header h1 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 64px;
+  color: #ffffff;
+}
+
+.otherlinks{
+  display: flex;
+  justify-content: space-between;
+}
+
+.needAjobDoneText{
+  rotate: 2deg;
+  color: white;
+}
