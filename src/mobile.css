@@ -1,0 +1,1028 @@
+@media screen and ( max-width:650px ) {
+
+/*** Header Component ********************************************************************/
+.header{
+  margin: 10px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.header img{
+    width: 50px;
+    height: 13px;
+}
+
+.CallToAction{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login{
+  padding-right: 7px;
+  line-height: 14px;
+  font-size: 11px;
+}
+
+.joinNow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  padding: 8px 10px 9px 10px;
+  height: 21.5px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+
+.headerBtns, .Hbtn{
+    display: none;
+}
+
+/*** Hero Component *************************************************************************/
+.hero{
+  margin-top: 60px;
+  padding: 0px 17px 15px 17px;
+}
+
+.hero h1{
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.heroText{
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.break3{
+    display: none;
+}
+
+.avatar1{
+    margin-bottom: -2px;
+    height: 22px;
+    width: 37px;
+}
+
+
+/*** Search Box Component *********************************************************************/
+.searchComponent{
+ display: flex;
+ justify-content: center;
+ align-items:center ;
+}
+
+.searchBox{
+  display: flex;
+  margin: 30px 25px 0px 25px;
+  height: 74px;
+  width: 100%;
+  border: 1px solid #f0f0f0;
+  border-radius:16px;
+}
+
+.searchBx::placeholder{
+  font-size: 11px;
+}
+
+
+.searchBx{
+ width: inherit;
+ border: none;
+ outline: none;
+ border-radius:17px;
+ padding: 29px 27px;
+ font-size: 11px;
+ line-height: 16px;
+ color: #959595;
+}
+
+
+/*** IT DEVELOPMENT Component *********************************************************************/
+
+.ItAndDesign{ 
+  margin: 50px 10px;
+  text-align: center;
+}
+
+.ItAnDesign{
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  padding-top: 15px;
+}
+
+.ItAnDesHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.ItAnDesHeader:hover{
+  cursor: pointer;
+}
+
+.ItAndDev{
+  color: #202229;
+  line-height: 1.5;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: lightgreen;
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.designAndCreative{
+  color: #202229;
+  line-height: 23.78px;
+  font-weight: 500;
+  font-size: 12px;
+  opacity: 80%;
+  margin-left: 10px;
+}
+
+.ItRoles{
+  padding: 10px;
+}
+
+.role{
+  padding-bottom: 15px;
+  color: #959595;
+  font-size: 8px;
+}
+
+.srole{
+  padding-bottom: 15px;
+  color:#202220; 
+  font-weight: 600;
+  font-size: 8px;
+}
+
+
+/*** MarketPlace Component *********************************************************************/
+
+.markePlace{
+  padding: 40px 10px;
+  margin-top: 5px;
+}
+
+/* The Top Slant */
+.markePlace::before {
+  content: "";
+  position: absolute;
+  top: -13px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 13px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.mph{
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.blackBack{
+  width: 30px;
+  height:30px;
+  border-radius:12px;
+}
+
+.blackBack img{
+    width: 12px!important;
+    height: 7px!important;
+}
+
+
+/*** MarketPlace inner Component after header**************************/
+.marketPlaceOffersAndImages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 5px 30px 5px;
+  width: 100%;
+}
+
+.marketOffers{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.offer1{
+    margin-bottom: 20px;
+}
+
+.offer1 h2{
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.offer2{
+    margin-bottom: 20px;
+}
+
+.offer2 h2{
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.offerHeader{
+    font-size: 22px;
+    letter-spacing: -0.01em;
+}
+
+.metrics{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: -15px;
+}
+
+.metric1, .metric2, .metric3{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.metricText{
+  padding-left: 2px;
+  padding-right: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+.marketOfferImages{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.ItAndDevContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.iconText{
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 3px;
+}
+
+.icon1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.icon1 img{
+    width: 50%;
+}
+
+.itandDev{
+  background-color: #ffffff;
+  padding: 20px 5px;
+  border-radius: 10px;
+  margin-left: 0px!important;
+  padding-left: 0px!important;
+  margin-right: 15px;
+}
+
+.itAnDevHeader{
+    text-align: center;
+    margin-top: -10px;
+    margin-left: 0px;
+    font-size: 12px;
+}
+
+.desAndCreative{
+  background-color: #ffffff;
+  padding: 20px 5px;
+  border-radius: 10px;
+  margin-left: 0px!important;
+  padding-left: 0px!important;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+
+.designAndCreativeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.designAndCreativeHeader{
+    text-align: center;
+    margin-top: -10px;
+    margin-left: 0px;
+    font-size: 12px;
+}
+
+.thirtyToExplore{
+    padding-right: 15px;
+    padding-left: 5px;
+}
+
+.nextOffers img{
+    width: 40px;
+    height: 40px;
+}
+
+.exploreMore{
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.moreToExplore{
+  margin-top: 0px;
+  font-size: 10px;
+  line-height: 0;
+}
+
+
+/*** How It Worked Component*******************************************************/
+
+.slant2{
+  position: relative;
+  background-color: #202229;
+  padding: 0px 15px 20px 15px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  border-top: 2px solid  #202229;
+  border-bottom: 2px solid  #202229;
+}
+
+
+/* The Top Slant */
+.slant2::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #202229;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.slant2::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #202229;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.quoteDiv{
+  text-align: right;
+  margin-top: -10.7px;
+  position: relative;
+}
+
+.quoteDiv img{
+  width: 80px;
+  height: 80px;
+}
+
+.howItWorked{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.howIt1{
+  width: 100%;
+}
+
+.howIt2{
+  width: 100%;
+}
+
+.howIt1Header h1{
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.avatar2{
+ padding-top: 12px; 
+}
+
+.howIt1Text{
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 400;
+  opacity: 80%;
+}
+
+.howIt1Arrow{
+    display: none;
+  margin-top: 20px;
+}
+
+.howIt1Arrow2{
+  display: flex;
+  opacity: 1!important;
+  margin-top: 20px;
+}
+
+
+.howIt1Arrow:hover{
+  cursor: pointer;
+}
+
+.JasonMakiProfile{
+  display: flex;
+  align-items: center;
+}
+
+.jasonMakiName{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.jason{
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 44px;
+  font-weight: 600; 
+  margin-top: 0px;
+}
+
+.JasonJob{
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 500; 
+  color: #ffffff;
+  opacity: 40%;
+  margin-top: -5px;
+}
+
+.JasonMakkiTestimony{
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400; 
+  color: #ffffff;
+  opacity: 80%;
+}
+
+.howIt2{
+  margin-top: 30px;
+  margin-left: 0px;
+}
+
+
+/*** How We Ensure Component*******************************************************/
+
+.howWeEnsure{
+  background-color: rgba(255,255,255,1);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.howWeEnsureContent{
+    padding-right: 0px;
+}
+
+.howWeEnsureHeader h1{
+  line-height: 1.3;
+  font-size: 20px;
+}
+
+.howWeEnsureHeader p{
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.step1,.step2,.step3,.step4,.step5{
+    width: min-content;
+    min-width: 100%;
+}
+
+.step1 p, .step2Header p, .step3 p, .step4 p, .step5 p{
+  padding-left: 5px;
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.step2content{
+  line-height: 1.6;
+  font-size: 12px;
+  font-weight: 400;
+  color: #202229;
+  opacity: 80%;
+  padding-top: 12px;
+}
+
+
+/* Start Your Journey Today Header  ****************************************************************/
+
+.startJ{
+  margin-top: 100px;
+}
+
+.startJ h1{
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+
+/* Start Your Journey Today content  ****************************************************************/
+
+
+.nextStarPerformer{
+  position: relative;
+  background-color: #EDEFFF;
+  margin: 20px 15px;
+  padding: 10px;
+  border-top: 2px solid #EDEFFF;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+
+/* The Top Slant */
+.nextStarPerformer::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.nextStarPerformer::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.nextStarImagesDiv{
+    display: none;
+}
+
+.TextContent1{
+  margin-top: 0px;
+  margin-left: 5px;
+}
+
+.TextContent2{
+  margin-top: 0px;
+  margin-left: 8px;
+}
+
+.TextContent3{
+  margin-top: 0px;
+  margin-left: 8px;
+}
+
+.TextContent1 h1, .TextContent2 h1, .TextContent3 h1{
+  line-height: 1.3;
+  font-size: 16px;
+  font-weight: 600;
+  color: #202229;
+}
+
+.TextContent1 p, .TextContent2 p, .TextContent3 p{
+  line-height: 1.3;
+  font-size: 12.52px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: #202229;
+  opacity: 80%;
+  padding-top: 4px;
+}
+
+.joinNowText{
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+
+/* evaluate to your heart component ***************************************************************/
+
+.evaluateToHeart{
+  background-color: rgb(246, 212, 138);
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/* The Top Slant */
+.evaluateToHeart::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgb(246, 212, 138);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%)!important;
+}
+
+/* The Bottom Slant */
+.evaluateToHeart::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgb(246, 212, 138);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.evaluateImagesDiv{
+    display: none;
+}
+
+.JoinNowArrow{
+  width: 30px;
+  height:30px;
+  border-radius:12px;
+}
+
+.arrow-image{
+    width: 12px;
+    height: 8px;
+}
+
+/* start building ur team component ***************************************************************/
+.startBuilding{
+  background-color: #959595;
+  margin: 20px 15px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.startBuildingImagesDiv{
+    display: none;
+}
+
+
+/* why choose zwilt component ***************************************************************/
+.whyChooseZwilt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+  background-color: #EDEFFF;
+  margin-top: 70px;
+}
+
+.zwiltSwiperPage{
+    height: 100%;
+    width: 100%;
+}
+
+.whyChooseQuestion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.whyChooseQuestion h1{
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.whyChooseQuestion p{
+  font-size: 13px;
+  line-height: 1.3;
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+/* FAQ component *********************************************************************************************/
+.faq{
+    padding: 50px 0px;
+}
+
+.faqHeader h1{
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.general1{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.general1 p{
+    font-size: 12px;
+}
+
+.question{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  padding-left: 10px;
+}
+
+.question p{
+    font-size: 11px;
+}
+
+.questionsB{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+}
+
+.questionsC{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+.general2{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding: 3px;
+  visibility: hidden;
+}
+
+.questionII{
+    padding: 5px 10px;
+}
+
+.questionII p{
+    font-size: 11px;
+}
+
+.question2{
+    padding: 0px!important;
+}
+
+.general3{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding:5px 6px 5px 6px;
+  display: none;
+}
+
+
+/* Need a job done component********************************/
+.needajobdone{
+  padding: 10px 10px 30px 10px;
+  margin-top: 0px;
+  border-top: 1px solid #0C0C0C;
+}
+
+
+/* The Top Slant */
+.needajobdone::before {
+  content: "";
+  position: absolute;
+  top: -30px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #0C0C0C;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.needAjobDoneHeader{
+  position: relative;
+  background-color: #525AA0;
+  padding: 40px  20px;
+  margin-right: 0px;
+  text-align: center;
+  margin-top: 10px;
+  border-bottom: 1px solid #525AA0;
+  border-top: 1px solid #525AA0;
+}
+
+
+
+/* The Top Slant */
+.needAjobDoneHeader::before {
+  content: "";
+  position: absolute;
+  top: -30px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height:30px;
+  background-color: #525AA0;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.needAjobDoneHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #525AA0;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+
+.footer{
+  margin-top: 60px;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.footer1{
+    width: 100%;
+}
+
+.footer2{
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.link3, .link4, .link5, .link6{
+  margin-bottom: 10px;
+}
+
+.link3 p, .link4 p, .link5 p, .link6 p{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.4; 
+  color: #ffffff;
+  padding: 4px 2px;
+}
+
+.link3:hover, .link4:hover, .link5:hover, .link6:hover{
+  cursor:pointer;
+}
+
+.f1text{
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  opacity: 80%;
+  margin-top: 5px;
+}
+
+.landr{
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+} 
+
+.links{
+    margin-top: 10px;
+}
+
+.link1, .link2{
+  background-color: #292834;
+  color: #EDEFFF;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  padding: 12px 30px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.link1:hover, .link2:hover{
+  cursor: pointer;
+  background-color: black;
+  transition: 400ms;
+}
+
+.otherlinkheader{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+}
+
+.footer2header h1 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.otherlinks{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.needAjobDoneText{
+  color: white;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

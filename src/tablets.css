@@ -1,0 +1,501 @@
+@media screen and ( max-width:1024px ) {
+    
+/*** Header Component ********************************************************************/
+.header{
+  margin: 15px 30px;
+}
+
+/*** Hero Component *************************************************************************/
+.hero{
+  margin-top: 150px;
+}
+
+.hero h1{
+  font-size: 50px;
+  line-height: 55px;
+}
+
+.heroText{
+  margin-top: -10px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+/*** Search Box Component *********************************************************************/
+.searchBox{
+  margin-top: 60px;
+}
+
+/*** IT DEVELOPMENT Component *********************************************************************/
+.ItAndDesign{ 
+  margin: 60px 50px;
+}
+
+
+/*** MarketPlace Component *********************************************************************/
+
+.markePlace{
+  padding: 80px 50px;
+  margin-top: 15px;
+}
+
+/* The Top Slant */
+.markePlace::before {
+  content: "";
+  position: absolute;
+  top: -30px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+.mph{
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+
+/*** MarketPlace inner Component after header**************************/
+.marketPlaceOffersAndImages{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 80px;
+  width: 100%;
+}
+
+.marketOffers{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.offer1{
+    margin-bottom: 20px;
+}
+
+.offer2{
+    margin-bottom: 20px;
+}
+
+.offerHeader{
+    font-size: 22px;
+    letter-spacing: -0.01em;
+}
+
+.metrics{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: -15px;
+}
+
+.metric1, .metric2, .metric3{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.metricText{
+  padding-left: 2px;
+  padding-right: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+
+.marketOfferImages{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.itandDev{
+  background-color: #ffffff;
+  padding: 40px 15px;
+  border-radius: 15px;
+  margin-left: 0px;
+}
+
+.itAnDevHeader{
+    text-align: center;
+    margin-top: -10px;
+}
+
+.desAndCreative{
+  background-color: #ffffff;
+  padding: 40px 15px;
+  border-radius: 15px;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.designAndCreativeHeader{
+    text-align: center;
+    margin-top: -10px;
+}
+/*** How It Worked Component*******************************************************/
+.slant2{
+  padding: 0px 50px 80px 50px;
+}
+
+.quoteDiv{
+  text-align: right;
+  margin-top: -13.4px;
+  position: relative;
+}
+
+.howItWorked{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.howIt1{
+  width: 50%;
+}
+
+.howIt2{
+  width: 50%;
+}
+
+.howIt1Header h1{
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.avatar4{
+    width:35px;
+    height: 35px;
+    margin-bottom: -5px;
+}
+
+.avatar2{
+ padding-top: 12px; 
+}
+
+.howIt1Text{
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.break1{
+    display: none;
+}
+
+.howIt2{
+  margin-top: 102px;
+  margin-left: 20px;
+}
+
+
+
+/*** How We Ensure Component*******************************************************/
+
+.howWeEnsure{
+  background-color: rgba(255,255,255,1);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 60px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.howWeEnsureHeader h1{
+  line-height: 1.3;
+  font-size: 36px;
+}
+
+.howWeEnsureHeader p{
+  line-height: 32px;
+  font-size: 20px;
+}
+
+/* Start Your Journey Today Header  ****************************************************************/
+
+.startJ{
+  text-align: center;
+  margin-top: 140px;
+}
+
+.startJ h1{
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+/* Start Your Journey Today content  ****************************************************************/
+
+.nextStarPerformer{
+  position: relative;
+  background-color: #EDEFFF;
+  margin: 50px 15px;
+  padding: 0px 10px;
+  border-top: 2px solid #EDEFFF;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.TextContent1 h1, .TextContent2 h1, .TextContent3 h1{
+  line-height: 1.3;
+  font-size: 30px;
+}
+
+.TextContent1 p, .TextContent2 p, .TextContent3 p{
+  line-height: 1.3;
+  font-size: 16px;
+}
+
+
+/* evaluate to your heart component ***************************************************************/
+
+.evaluateToHeart{
+  background-color: rgb(246, 212, 138);
+  margin: 50px 15px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.evaluateImagesDiv{
+  margin-bottom: -15px;
+}
+
+/* start building ur team component ***************************************************************/
+.startBuilding{
+  background-color: #959595;
+  margin: 50px 15px;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* why choose zwilt component ***************************************************************/
+.whyChooseZwilt{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 15px;
+  background-color: #EDEFFF;
+  margin-top: 70px;
+}
+
+.whyChooseQuestion h1{
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.whyChooseQuestion p{
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+
+/* FAQ component *********************************************************************************************/
+.faqHeader h1{
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.general1{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.question{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 195.5px;
+}
+
+.questionsB{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+}
+
+.questionsC{
+  display: flex;
+  border-top: 1px solid #d6d6d6;
+  border-bottom:1px solid #d6d6d6 ;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+.general2{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 30px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  visibility: hidden;
+}
+
+.questionII{
+  padding-left: 23px;
+}
+
+.general3{
+  text-align: center;
+  border-right: 1px solid #d6d6d6;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/* Need a job done component ****/
+.needajobdone{
+  border-top: 3px solid #0C0C0C;
+  padding: 20px 40px 50px 40px;
+}
+
+.footer{
+  margin-top: 150px;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.footer1{
+    width: 100%;
+}
+
+.footer2{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.link3 p, .link4 p, .link5 p, .link6 p{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px; 
+  color: #ffffff;
+}
+
+.link3:hover, .link4:hover, .link5:hover, .link6:hover{
+  cursor:pointer;
+}
+
+.f1text{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #ffffff;
+  opacity: 80%;
+  margin-top: 20px;
+}
+
+.landr{
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+} 
+
+.link1, .link2{
+  background-color: #292834;
+  color: #EDEFFF;
+  font-weight: 500;
+  font-size: 14.56px;
+  line-height: 12.16px;
+  padding: 15px 40px;
+  border-radius: 13px;
+  margin-right: 10px;
+}
+
+.link1:hover, .link2:hover{
+  cursor: pointer;
+  background-color: black;
+  transition: 400ms;
+}
+
+.otherlinkheader{
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 32px;
+  color: #ffffff;
+  opacity: 40%;
+}
+
+.footer2header h1 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.otherlinks{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.needAjobDoneText{
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

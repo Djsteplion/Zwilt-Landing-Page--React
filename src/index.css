@@ -1,32 +1,104 @@
-
-
-@font-face {
-  font-family: 'Switzer';
-  src:
-       url('./fonts/Switzer-Black.otf'),
-       url('./fonts/Switzer-Bold.otf'),
-       url('./fonts/Switzer-Extrabold.otf'),
-       url('./fonts/Switzer-Extralight.otf'),
-       url('./fonts/Switzer-Light.otf'),
-       url('./fonts/Switzer-Medium.otf'),
-       url('./fonts/Switzer-Regular.otf'),
-       url('./fonts/Switzer-Semibold.otf'),
-       url('./fonts/Switzer-Thin.otf');
-
-  font-style: normal;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 
 
 body{
   font-family:'Switzer', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body, html{
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  margin-bottom: -500px;
+}
+
+
+/* Regular - 400 */
+@font-face {
+  font-family: 'Switzer';
+  src: url('./fonts/Switzer-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Medium - 500 */
+@font-face {
+  font-family: 'Switzer';
+  src: url('./fonts/Switzer-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Semibold - 600 */
+@font-face {
+  font-family: 'Switzer';
+  src: url('./fonts/Switzer-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Bold - 700 */
+@font-face {
+  font-family: 'Switzer';
+  src: url('./fonts/Switzer-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Thin - 100 (Optional, but good for pixel perfection) */
+@font-face {
+  font-family: 'Switzer';
+  src: url('./fonts/Switzer-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/****** EXPLORE ARROW *********************************************************************/
+.blackBack{
+  width: 74px;
+  height: 74px;
+  border-radius:30px;
+  background-color: #0C0C0C; /* yellow rgba(255,190,46,1) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border to define edges on dark mode */
+}
+
+.blackBack:hover{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor:pointer;
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.arrow-image {
+  /* It sits at 3 PM naturally */
+  transform: rotate(0deg); 
+  display: inline-block;
+  /* Use a smooth timing function for that premium Zwilt feel */
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* On hover, run the animation */
+.blackBack:hover .arrow-image {
+  animation: rotate-360 0.7s ease-in-out forwards;
 }
 
 
@@ -36,11 +108,13 @@ body, html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 36px 70px;
+  top: 0;
+  margin: 20px 50px;
   background-color: #525AA0;
   height: 60px;
   border-radius: 15px;
   padding: 10px;
+  z-index: 3;
 }
 
 .header:hover{
@@ -48,11 +122,13 @@ body, html{
 }
 
 .Hbtn{
+  font-family:'Switzer', sans-serif;
   color: #ffffff;
   padding-right: 10px;
   line-height: 14px;
   font-size: 14px;
   font-weight: 500;
+  text-decoration-line: none;
 }
 
 .Hbtn:hover{
@@ -95,16 +171,129 @@ body, html{
   margin-top: 240px;
 }
 
+@keyframes slideInUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+} 
+
 .hero h1{
   color: #202220;
   font-size: 54px;
   font-weight: 700;
   line-height: 64px;
+  opacity: 0;
 }
 
-.avatar1{
-  margin-bottom: -5px;
+.hero.visible h1{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+
+.avatar1{
+  cursor: pointer;
+}
+
+.avatar1.visible{
+  animation: double-bounce 4s ease-in-out forwards;
+}
+
+.avatar1:hover {
+  animation: ball-toss-bounce 4s ease-in-out forwards;
+  cursor: pointer;
+}
+
+@keyframes double-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  /* Throw up - Highest Point */
+  30% {
+    transform: translateY(-70px)rotate(1080deg) ;
+    animation-timing-function: ease-out;
+  }
+  /* First Hit */
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  /* Second Bounce - Lower Point */
+  70% {
+    transform: translateY(-40px) rotate(360deg);
+    animation-timing-function: ease-out;
+  }
+  /* Second Hit */
+  85% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  /* Final tiny settle */
+  93% {
+    transform: translateY(-10px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes ball-toss-bounce {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  /* The Apex: Throwing it up and spinning twice (720deg) */
+  40% {
+    transform: translateY(-150px) rotate(720deg);
+    animation-timing-function: ease-in;
+  }
+  /* Coming back down and spinning one more time (1080deg total) */
+  45% {
+    transform: translateY(-130) rotate(720deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-110) rotate(1080deg);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: translateY(90) rotate(1080deg);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: translateY(-70) rotate(1080deg);
+    animation-timing-function: ease-out;
+  }
+  65% {
+    transform: translateY(50) rotate(1080deg);
+    animation-timing-function: ease-out;
+  }
+  70% {
+    transform: translateY(-10) rotate(1080deg);
+    animation-timing-function: ease-out;
+  }
+  /* First small bounce */
+  80% {
+    transform: translateY(30px) rotate(1100deg);
+    animation-timing-function: ease-in;
+  }
+  /* Back to floor */
+  90% {
+    transform: translateY(-20) rotate(1120deg);
+    animation-timing-function: ease-out;
+  }
+  /* Final settle */
+  100% {
+    transform: translateY(0) rotate(1080deg);
+  }
+}
+
 
 .heroText{
   color: black;
@@ -112,7 +301,13 @@ body, html{
   font-size: 22px;
   font-weight: 400;
   line-height: 32px;
+  opacity: 0.2;
 }
+
+.hero.visible .heroText{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 
 
 /*** Search Box Component *********************************************************************/
@@ -148,8 +343,17 @@ body, html{
   font-size: 16px;
 }
 
-.searchArrow:hover{
+.arrowContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.arrowContainer:hover{
   cursor: pointer;
+  box-shadow: 0 15px 30px rgba(255, 156, 51, 0.4), 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color:rgba(255, 156, 51, 0.4) ;
 }
 
 
@@ -158,6 +362,11 @@ body, html{
 .ItAndDesign{ 
   margin: 80px 140px;
   text-align: center;
+  opacity: 0;
+}
+
+.ItAndDesign.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .ItAnDesign{
@@ -172,7 +381,6 @@ body, html{
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  height: 44px;
 }
 
 .ItAnDesHeader:hover{
@@ -180,13 +388,15 @@ body, html{
 }
 
 .ItAndDev{
-  height:24px;
   color: #202229;
   line-height: 23.78px;
   font-weight: 600;
   border-radius: 15px;
   background-color: lightgreen;
   padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .designAndCreative{
@@ -195,20 +405,32 @@ body, html{
   font-weight: 500;
   font-size: 16px;
   opacity: 80%;
-  padding-left: 16px;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.designAndCreative:hover{
+  cursor: pointer;
+  font-weight: 700;
+  color: #0C0C0C;
+  transition: all 300ms ease-in-out ;
 }
 
 .ItRoles{
   display: flex;
-  justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 30px;
 }
 
-.roleRow1,.roleRow2,.roleRow3{
+.roleRow1,.roleRow2,.roleRow3, .roleRow4{
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: space-between;
 }
 
 .role{
@@ -221,8 +443,7 @@ body, html{
   padding-bottom: 15px;
   color:#202220; 
   font-weight: 600;
-  line-height: 16px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .role:hover, .srole:hover{
@@ -240,46 +461,80 @@ body, html{
 
 /*** MarketPlace Component *********************************************************************/
 
-.slant1{
-  background-color: #EDEFFF;
-  padding: 40px 0px 1200px 100px;
-  rotate: -2deg;
-  width:inherit;
-  overflow: hidden;
-  margin-left: -25px;
-  margin-right: -15px;
+.markePlace{
+  position: relative;
+  padding: 100px 70px;
+  /* Add margin to account for the slant height */
+  margin-top: 30px;
+  margin-bottom: 0px;
+   background-color: #EDEFFF;
+ /* rotate: 2deg; */
 }
 
-.markePlace{
+/* The Top Slant */
+.markePlace::before {
+  content: "";
   position: absolute;
-  rotate: 2deg;
+  top: -50px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.markePlace::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .marketPlaceHeading{
   text-align: center;
-  padding-top: 100px;
 }
 
 .mph{
   font-size: 54px;
   font-weight: 700;
   line-height: 64px;
+  opacity:0;
+}
+
+.mph.visible{
+   animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /*** MarketPlace inner Component after header**************************/
 
 .marketPlaceOffersAndImages{
   display: flex;
-  justify-content: space-around;
-  margin-top: 80px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 80px;
+  width: 100%;
 }
 
-.offer1{
-  margin-bottom: 140px;
+.marketOffers{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  opacity:0;
 }
 
-.offer2{
-  margin-bottom: 100px;
+.marketOffers.visible{
+   animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .metrics{
@@ -287,6 +542,7 @@ body, html{
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  flex-wrap: wrap;
 }
 
 .metric1, .metric2, .metric3{
@@ -298,20 +554,38 @@ body, html{
 }
 
 .metricText{
-  padding-left: 8px;
+  padding-left: 2px;
+  padding-right: 8px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
 }
 
+.thirtyToExplore{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .nextOffers{
   display: flex;
   align-items: center;
-  margin-top: 50px;
 }
 
 .nextOffers:hover{
-  cursor: pointer;
+  cursor:pointer;
+}
+
+.nextOffers:hover .blackBack{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor:pointer;
+}
+
+.nextOffers:hover .arrow-image {
+  animation: rotate-360 0.7s ease-in-out forwards;
 }
 
 .exploreMore{
@@ -319,24 +593,27 @@ body, html{
   color: #202220;
   font-weight: 500;
   font-size: 22px;
-  line-height: 18px;
 }
 
 .marketOfferImages{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-left: 200px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  opacity: 0;
 }
 
-.itAnDevHeader{
-  margin-bottom: 20px;
+.marketOfferImages.visible{
+   animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .itandDev{
   background-color: #ffffff;
   padding: 40px 25px;
-  margin-bottom: 35px;
   border-radius: 15px;
+  margin-left: 50px;
 }
 
 .ItAndDevContainer{
@@ -352,8 +629,8 @@ body, html{
 .desAndCreative{
   background-color: #ffffff;
   padding: 40px 25px;
-  margin-bottom: 25px;
   border-radius: 15px;
+  margin-left: 50px;
 }
 
 .designAndCreativeContainer{
@@ -407,28 +684,76 @@ body, html{
 /*** How It Worked Component*******************************************************/
 
 .slant2{
+  position: relative;
   background-color: #202229;
-  padding: 40px 40px 600px 100px;
-  rotate: -2deg;
-  margin-left: -25px;
-  margin-right: -15px;
+  padding: 0px 70px 120px 70px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  border-top: 2px solid  #202229;
+  border-bottom: 2px solid  #202229;
+}
+
+
+/* The Top Slant */
+.slant2::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: #202229;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.slant2::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #202229;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .quoteDiv{
   text-align: right;
-  rotate: 2deg;
-  margin-top: -50px;
+  margin-top: -15px;
+  position: relative;
 }
 
 .howItWorked{
-  position: absolute;
-  rotate: 2deg;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Hide the default Swiper arrows completely */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+.howIt1{
+  width: 50%;
+  opacity: 0;
+}
+
+.howIt1.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .howIt2{
-  margin-left: 200px;
+  width: 50%;
+  opacity: 0;
+}
+
+.howIt2.visible{
+   animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .howIt1Header h1{
@@ -436,6 +761,10 @@ body, html{
   line-height: 64px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.avatar4{
+  margin-bottom: -5px;
 }
 
 .avatar2{
@@ -447,14 +776,29 @@ body, html{
   font-size: 22px;
   line-height: 32px;
   font-weight: 400;
-  opacity: 80%;
+  opacity: 80%!important;
 }
 
 .howIt1Arrow{
   margin-top: 20px;
 }
 
+.howIt1Arrow2{
+  display: none;
+  opacity: 1!important;
+  margin-top: 10px;
+}
+
+.leftArrow:hover, .rightArrow:hover{
+  transform: scale(1.1);
+  transition: all 300ms ease-out;
+}
+
 .howIt1Arrow:hover{
+  cursor: pointer;
+}
+
+.howIt1Arrow2:hover{
   cursor: pointer;
 }
 
@@ -465,19 +809,22 @@ body, html{
 
 .jasonMakiName{
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .jason{
   color: #ffffff;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 44px;
   font-weight: 600; 
+  margin-top: 0px;
 }
 
 .JasonJob{
-  margin-top: -30px;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.4;
   font-weight: 500; 
   color: #ffffff;
   opacity: 40%;
@@ -489,6 +836,9 @@ body, html{
   line-height: 32px;
   font-weight: 400; 
   color: #ffffff;
+}
+
+.card-slider{
   opacity: 80%;
 }
 
@@ -503,6 +853,43 @@ body, html{
   background-color: rgba(255,255,255,1);
   padding-left: 50px;
   padding-top: 60px;
+  position: relative;
+  margin-top: 50px;
+}
+
+
+/* The Top Slant */
+.howWeEnsure::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(255,255,255,1);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.howWeEnsure::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color:  rgba(255,255,255,1);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.howWeEnsureHeader{
+  opacity: 0;
+}
+
+.howWeEnsureHeader.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .howWeEnsureHeader h1{
@@ -521,7 +908,13 @@ body, html{
 }
 
 .howWeEnsureContent{
-  width: max-content;
+  margin-top: 10px;
+  width: 100%;
+  padding-right: 70px;
+}
+
+.howWeEnsureContent.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .howWeEnsureContent:hover{
@@ -536,6 +929,9 @@ body, html{
   border-radius: 7px;
   margin-bottom: 10px;
   color: #202229;
+  background-color: #f0f0f0;
+  margin-bottom: 3px;
+  transition: all 500ms ease-out;
 }
 
 .step3, .step4, .step5{
@@ -548,10 +944,7 @@ body, html{
   padding: 10px;
   border-radius: 7px;
   margin-bottom: 10px;
-}
-
-.step2::after{
-  rotate: -2deg;
+  transition: all 500ms ease-out;
 }
 
 .step2content{
@@ -561,11 +954,17 @@ body, html{
   color: #202229;
   opacity: 80%;
   padding-top: 12px;
+  transition: all 500ms ease-out;
 }
 
 .step2Header{
   display: flex;
   align-items: center;
+  transition: all 500ms ease-out;
+}
+
+.step2Header img{
+   transition: all 500ms ease-out;
 }
 
 .step1 p, .step2Header p, .step3 p, .step4 p, .step5 p{
@@ -576,7 +975,11 @@ body, html{
 }
 
 .hlight{
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.hBold{
+  font-weight: 700;
 }
 
 
@@ -585,6 +988,11 @@ body, html{
 .startJ{
   text-align: center;
   margin-top: 140px;
+  opacity: 0;
+}
+
+.startJ.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .startJ h1{
@@ -594,45 +1002,109 @@ body, html{
   color: rgba(32, 34, 41, 1);
 }
 
-/* Start Your Journey Today content  ****************************************************************/
-
-.slant3{
-  background-color: #EDEFFF;
-  margin: 50px 70px 50px 40px;
-  border-radius: 10px;
-  margin-top: 40px;
-  rotate: -2deg;
-  padding: 0px 30px 391px 30px;
+.JoinNowArrow{
+  width: 50px;
+  height: 50px;
+  border-radius:21px;
+  background-color: #0C0C0C; /* yellow rgba(255,190,46,1) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border to define edges on dark mode */
 }
 
+.JoinNowArrow:hover{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor:pointer;
+}
+
+
+/* On hover, run the animation */
+.JoinNowArrow:hover .arrow-image {
+  animation: rotate-360 0.7s ease-in-out forwards;
+}
+
+.jN:hover .JoinNowArrow{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  cursor:pointer;
+}
+
+.jN:hover .arrow-image {
+  animation: rotate-360 0.7s ease-in-out forwards;
+}
+
+
+/* Start Your Journey Today content  ****************************************************************/
+
 .nextStarPerformer{
+  position: relative;
+  background-color: #EDEFFF;
+  margin: 50px 70px;
+  padding: 0px 20px;
+  border-top: 2px solid #EDEFFF;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.nextStarPerformer.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* The Top Slant */
+.nextStarPerformer::before {
+  content: "";
   position: absolute;
-  rotate: 2deg;
+  top: 0px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.nextStarPerformer::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #EDEFFF;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .nextStarText{
   display: flex;
-  margin-top: 30px;
+  flex-direction: row;
+  align-items: start;
 }
 
-.numberImage{
-  margin-top: 20px;
-}
 
 .TextContent1{
-  margin-left: 30px;
+  margin-top: -25px;
+  margin-left: 12px;
 }
 
 .TextContent2{
-  margin-left: 20px;
+  margin-top: -25px;
+  margin-left: 12px;
 }
 
 .TextContent3{
+  margin-top: -25px;
   margin-left: 12px;
 }
 
 .TextContent1 h1, .TextContent2 h1, .TextContent3 h1{
-  margin-top: 15px;
   line-height: 44px;
   font-size: 34px;
   font-weight: 600;
@@ -640,7 +1112,6 @@ body, html{
 }
 
 .TextContent1 p, .TextContent2 p, .TextContent3 p{
-  margin-top: 15px;
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -669,57 +1140,110 @@ body, html{
 
 .nextStarPerformer{
   display: flex;
+  flex-direction: row;
+  align-items: center;
 
 }
 
 .nextStarImagesDiv{
-  display: flex;
-  margin-top: -10px;
-  rotate: -2deg;
-  margin-left: 190px;
+  margin-bottom: -5px;
 }
 
 /* evaluate to your heart component ***************************************************************/
 
-.slant4{
+.evaluateToHeart{
   background-color: rgb(246, 212, 138);
-  margin: 50px 70px 50px 50px;
+  margin: 50px 70px;
+  margin-top: 0px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 10px;
-  margin-top: 40px;
-  rotate: -2deg;
-  padding: 0px 30px 0px 30px;
 }
 
-.evaluateToHeart{
-  display: flex;
-  rotate: 2deg;
+.evaluateToHeart.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+
+/* The Top Slant */
+.evaluateToHeart::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: rgb(246, 212, 138);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.evaluateToHeart::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgb(246, 212, 138);
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
 
 .evaluateImagesDiv{
-  margin-left: 210px;
-  margin-top: -13px;
-  rotate: -2deg;
+  margin-bottom: -5px;
 }
 
 /* start building ur team component ***************************************************************/
-.slant5{
+.startBuilding{
   background-color: #959595;
-  margin: 50px 50px 50px 60px;
+  margin: 50px 70px;
   border-radius: 10px;
-  margin-top: 40px;
-  rotate: -2deg;
-  padding: 0px 22px 6px 30px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.startBuilding{
-  display: flex;
-  rotate: 2deg;
+.startBuilding.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* The Top Slant */
+.startBuilding::before {
+  content: "";
+  position: absolute;
+  top: 0px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #959595;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.startBuilding::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #959595;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 .startBuildingImagesDiv{
-  margin-left: 240px;
-  margin-top: -16px;
-  rotate: -2deg;
+  margin-bottom: -5px;
 }
 
 /* why choose zwilt component ***************************************************************/
@@ -727,13 +1251,28 @@ body, html{
 .whyChooseZwilt{
   display: flex;
   justify-content: space-between;
-  padding: 50px 0px 50px 60px;
+  padding: 50px 50px 50px 70px;
   background-color: #EDEFFF;
   margin-top: 70px;
 }
 
+.zwiltSwiperPage{
+  height: min-content;
+  width: 85%;
+  opacity: 0;
+}
+
+.zwiltSwiperPage.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 .whyChooseQuestion{
   width: 100%;
+  opacity: 0;
+}
+
+.whyChooseQuestion.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .whyChooseQuestion h1{
@@ -748,7 +1287,7 @@ body, html{
   line-height: 32px;
   font-weight: 400;
   color: #202229;
-  opacity: 80%;
+  opacity: 80%!important;
 }
 
 .onboardWtoutRiskContainer{
@@ -812,6 +1351,11 @@ body, html{
 
 .faqHeader{
   text-align: center;
+  opacity: 0;
+}
+
+.faqHeader.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .faqHeader h1{
@@ -820,6 +1364,15 @@ body, html{
   line-height: 54px;
   font-weight: 700;
   color: #202229; 
+}
+
+.questionz{
+  margin-top: 10px;
+  opacity: 0;
+}
+
+.questionz.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .question1{
@@ -845,10 +1398,11 @@ body, html{
 .question{
   display: flex;
   justify-content: start;
+  align-items: center;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 400px;
+  padding-left: 393px;
 }
 
 .otherQuestion{
@@ -871,7 +1425,12 @@ body, html{
   border-top: 1px solid #d6d6d6;
   border-bottom:1px solid #d6d6d6 ;
   align-items: center;
-  background-color: #e8e8e8;
+}
+
+.questionsB:hover,.question1:hover, .question2:hover,.questionsC:hover{
+    background-color: #e8e8e8;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
 }
 
 
@@ -909,51 +1468,103 @@ body, html{
   padding-bottom: 15px;
 }
 
-.questions:hover{
+.questionz:hover{
   cursor: pointer;
 }
 
 
 /* Need a job done component ****/
 
-.slant6{
+.needajobdone{
   background-image: linear-gradient(to bottom, #0C0C0C,#202229 100%);
-  padding: 40px 20px 1000px 70px;
-  rotate: -2deg;
-  margin-left: -25px;
-  margin-right: -15px;
-  margin-bottom: -500px;
-  overflow-y: hidden;
+  padding: 40px 50px 200px 50px;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0;
+  width: inherit;
+  border-top: 1px solid #0C0C0C;
 }
 
-.needajobdone{
+
+/* The Top Slant */
+.needajobdone::before {
+  content: "";
   position: absolute;
+  top: -50px; /* Height of the slant */
+  left: 0;
   width: 100%;
+  height: 50px;
+  background-color: #0C0C0C;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
 }
 
 .needAjobDoneHeader{
-  position: absolute;
-  width:83.5%;
+  position: relative;
   background-color: #525AA0;
   padding: 100px  70px;
   margin-right: 0px;
   text-align: center;
-  overflow-x: hidden;
+  margin-top: 60px;
+  border-bottom: 1px solid #525AA0;
+  border-top: 1px solid #525AA0;
+  opacity: 0;
+}
+
+.needAjobDoneHeader.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* The Top Slant */
+.needAjobDoneHeader::before {
+  content: "";
+  position: absolute;
+  top: -50px; /* Height of the slant */
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #525AA0;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+
+/* The Bottom Slant */
+.needAjobDoneHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #525AA0;
+  /* This creates the diagonal line from top-left to bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
 
 .footer{
- rotate: 2deg;
-  margin-top: 410px;
-  width: 89%;
-  margin-left: -17px;
+  margin-top: 150px;
+  width: 100%;
   display: flex; 
-  justify-content: space-between; 
-  padding: 70px 15px;  
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.footer1{
+  opacity: 0;
+}
+
+.footer1.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .footer2{
-  margin-top: -70px;
+  opacity: 0;
+}
+
+.footer2.visible{
+  animation: slideInUp 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .link3 p, .link4 p, .link5 p, .link6 p{
@@ -961,6 +1572,13 @@ body, html{
   font-size: 18px;
   line-height: 24px; 
   color: #ffffff;
+  padding: 5px;
+}
+
+.link3 p:hover, .link4 p:hover, .link5 p:hover, .link6 p:hover{
+  text-decoration-line: underline;
+  opacity: 80%;
+  transition: all 300ms ease-in-out;
 }
 
 .link3:hover, .link4:hover, .link5:hover, .link6:hover{
@@ -985,6 +1603,10 @@ body, html{
   opacity: 40%;
 } 
 
+.links{
+  margin-top: 10px;
+}
+
 .link1, .link2{
   background-color: #292834;
   color: #EDEFFF;
@@ -993,6 +1615,7 @@ body, html{
   line-height: 12.16px;
   padding: 15px 40px;
   border-radius: 13px;
+  margin-right: 10px;
 }
 
 .link1:hover, .link2:hover{
@@ -1019,9 +1642,18 @@ body, html{
 .otherlinks{
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
 }
 
 .needAjobDoneText{
-  rotate: 2deg;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.needAjobDoneText h1{
+  padding-bottom: 10px;
+}
+

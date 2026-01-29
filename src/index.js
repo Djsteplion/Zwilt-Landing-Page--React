@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import './tablets.css';
+import './mobile.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -9,7 +10,7 @@ import SearchBox from './components/SearchBox';
 import ITDevelopment from './components/ITDevelopment';
 import Interlude from './components/Interlude';
 import MaketPlace from './components/MaketPlace';
-import SwiperPage from './components/SwiperPage';
+/* import SwiperPage from './components/SwiperPage'; */
 import HowItWorked from './components/HowItWorked';
 import HowWeEnsured from './components/HowWeEnsured';
 import StartYourJourneyHeader from './components/StartYourJourneyHeader';
@@ -19,7 +20,6 @@ import StartBuilding from './components/StartBuilding';
 import WhyChooseZiltContainer from './components/WhyChooseZiltContainer';
 import Faq from './components/Faq';
 import NeedAJobDone from './components/NeedAJobDone';
-import 'animate.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
