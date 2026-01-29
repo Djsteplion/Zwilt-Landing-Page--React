@@ -1,28 +1,37 @@
 import React from 'react';
-import vector12 from '../images/Vector (12).png';
-import frame55 from '../images/Frame 55.png'
+//import vector12 from '../images/Frame 626644.png';
+import JoinNowArrow from './JoinNowArrow';
+import frame55 from '../images/Frame 55.png';
+import { useEffect } from 'react';
+import { observeElements } from '../animations';
 
 const NeedAJobDone = () => {
+
+useEffect(() => {
+    // Start observing sections when the page loads
+    observeElements('.needAjobDoneHeader, .footer1, .footer2');
+}, []);
+
   return (
     <div className="slant6">
     <div className="needajobdone">
         <div className="needAjobDoneHeader">
             <div className="needAjobDoneText">
                 <h1>
-                    Need a job  done, and done<br/>
+                    Need a job  done, and done <br className='break3'/>
                     well? Get started
                 </h1>
-                <img src={vector12} alt=""/>
+                <JoinNowArrow />
             </div>
         </div>
       
-        <div className="footer">
+        <div className="footer" id='contactus'>
             <div className="footer1">
                 <img src={frame55} alt=""/>
                 <p className="f1text">
-                    We take complex hiring<br/>
-                    processes - and simplify them.<br/>
-                    Connecting you to the world's<br/>
+                    We take complex hiring  <br className='break3'/>
+                    processes - and simplify them. <br className='break3'/>
+                    Connecting you to the world's  <br className='break3'/>
                     highly qualified talent pool.
                 </p>
                 <p className="landr">
@@ -36,7 +45,7 @@ const NeedAJobDone = () => {
             <div className="footer2">
                 <div className="footer2header">
                     <h1>
-                        Connecting the right people to<br/> the right businesses.
+                        Connecting the right people to <br className='break3'/> the right businesses.
                     </h1>
                 </div>    
                     <div className="otherlinks">
@@ -72,7 +81,6 @@ const NeedAJobDone = () => {
                             <p>Linkedln</p>
                             <p>Twitter</p>
                         </div>
-
                     </div>
             </div>
         </div>

@@ -1,15 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { useEffect } from 'react';
+import { observeElements } from '../animations';
 
 const Faq = () => {
+
+useEffect(() => {
+    // Start observing sections when the page loads
+    observeElements('.faqHeader, .questionz');
+}, []);
+    
   return (
     <div>
-         <div className="faq">
+    <div className="faq">
         <div className="faqHeader">
             <h1>
                 Frequently asked questions
             </h1>
         </div>
-        <div className="questions">
+        <div className="questionz">
             <div className="question1">
                 <div className="general1">
                     <p>
@@ -35,7 +43,7 @@ const Faq = () => {
                     <p>General</p>
                 </div>
                 <div className="question">
-                    <p><b>How does the payment work?</b></p>
+                    <p>How does the payment work?</p>
                 </div>
             </div>
             <div className="questionsB">

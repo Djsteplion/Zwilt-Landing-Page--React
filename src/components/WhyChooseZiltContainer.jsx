@@ -1,13 +1,21 @@
 import React from 'react';
 import SwiperPage from '../components/SwiperPage';
+import { useEffect } from 'react';
+import { observeElements } from '../animations';
 
 const WhyChooseZiltContainer = () => {
-  return (
+
+useEffect(() => {
+    // Start observing sections when the page loads
+    observeElements('.whyChooseQuestion, .zwiltSwiperPage');
+}, []);
     
-     <div className="whyChooseZwilt">
+
+  return (
+    <div className="whyChooseZwilt" id='aboutus'>
         <div className="whyChooseQuestion">
             <h1>
-                Why choose<br/>
+                Why choose <br className='break3'/>
                 Zwilt? 
             </h1>
             <p>
@@ -17,8 +25,9 @@ const WhyChooseZiltContainer = () => {
                 highly qualified talent pool.
             </p>
         </div>
-        <SwiperPage />
-
+        <div className="zwiltSwiperPage">
+            <SwiperPage />
+        </div>
     </div>
   )
 }

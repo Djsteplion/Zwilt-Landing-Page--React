@@ -3,26 +3,24 @@ import Frame55 from '../images/Frame 55.png';
 
 const Header = () => {
   return (
-    <div>
-         <div>
-         <div className="header">
-         <img src={Frame55} className="logo" alt="logo" />
+    <div className="header">
+        <img src={Frame55} className="logo" alt="logo" />
         <div classNameName="headerBtns">
-            <span className="Hbtn">
+            <a className="Hbtn" href='#findwork'>
                 Find Work
-            </span>
-            <span className="Hbtn">
+            </a>
+            <a className="Hbtn" href='#findtalent'>
                 Find Talent
-            </span>
-            <span className="Hbtn">
+            </a>
+            <a className="Hbtn" href='#articles'>
                 Articles
-            </span>
-            <span className="Hbtn">
+            </a>
+            <a className="Hbtn" href='#aboutus'>
                 About Us
-            </span>
-            <span className="Hbtn">
+            </a>
+            <a className="Hbtn" href='#contactus'>
                 Contact Us
-            </span>
+            </a>
         </div>
         <div className="CallToAction">
             <span className="login">
@@ -32,8 +30,6 @@ const Header = () => {
                 Join Now
             </span>
         </div>
-    </div>
-    </div>
     </div>
   )
 }

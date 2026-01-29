@@ -7,7 +7,9 @@ const SearchBox = () => {
       <div className="searchComponent">
         <div className="searchBox">
             <input type="text"  placeholder="Looking for" className="searchBx" />
-            <img src={searcharrow} className="searchArrow" alt="logo" />
+            <div className="arrowContainer">
+              <img src={searcharrow} className="searchArrow" alt="logo" />
+            </div>
         </div>
     </div>
     </div>

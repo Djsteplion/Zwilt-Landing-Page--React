@@ -1,9 +1,18 @@
 import React from 'react'
 import number1 from '../images/1.png';
-import join from '../images/Frame 626644.png';
+import JoinNowArrow from './JoinNowArrow';
 import nextStar from '../images/Group 1094.png';
+import { useEffect } from 'react';
+import { observeElements } from '../animations';
+
 
 const NextPerformer = () => {
+
+useEffect(() => {
+    // Start observing sections when the page loads
+    observeElements('.nextStarPerformer');
+}, []);
+
   return (
     <div>
          <div className="slant3">
@@ -18,11 +27,11 @@ const NextPerformer = () => {
                             performer
                         </h1>
                         <p>
-                            Explore the vast Zwilt marketplace to find the candidate<br/>
+                            Explore the vast Zwilt marketplace to find the candidate <br className='break3'/>
                             that meets your needs.
                         </p>
                         <div className="jN">
-                            <img src={join} alt=""/>
+                            <JoinNowArrow />
                             <span className="joinNowText">Join Now</span>
                         </div>
                     </div>
